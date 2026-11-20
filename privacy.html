@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — AI Slop Detector</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 760px; margin: 2.5rem auto; padding: 0 1.25rem; line-height: 1.6; color: #18181b; }
+    h1, h2 { line-height: 1.25; }
+    h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+    .meta { color: #52525b; font-size: 0.9rem; margin-bottom: 2rem; }
+    hr { border: 0; border-top: 1px solid #e4e4e7; margin: 2.5rem 0; }
+    code { background: #f4f4f5; padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.9em; }
+    a { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy — AI Slop Detector</h1>
+  <p class="meta">Last updated: November 20, 2026 · <a href="#el">Ελληνικά παρακάτω</a> · <a href="appeal.html">Creator Review / Appeal</a></p>
+
+  <h2>1. Who we are</h2>
+  <p>AI Slop Detector is a browser extension that labels likely AI-generated "slop" channels on YouTube and lets signed-in users submit reports. Contact: <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>.</p>
+
+  <h2>2. Data we collect and why</h2>
+  <ul>
+    <li><strong>Without signing in:</strong> The extension only downloads the public list of reviewed channels and reads public YouTube channel RSS feeds/pages locally in your browser to compute channel signals. No personal data or viewing history is sent to our servers.</li>
+    <li><strong>Account data (when you sign up / sign in):</strong> Your email address and authentication credentials (hashed password and session tokens), handled via Supabase Auth. Your session token is stored in the extension's isolated IndexedDB storage (not accessible to YouTube scripts).</li>
+    <li><strong>User reports (when you submit a report):</strong> Your user ID, the reported YouTube video ID, the channel handle/ID, the reason(s) you selected, and the timestamp.</li>
+    <li><strong>Automatic channel signals (signed-in users only):</strong> When you browse YouTube while signed in and the extension flags a channel as "Possible AI" from its public RSS feed, it sends the channel ID/handle and numeric profile metrics (e.g., upload rate, title template share) to our backend to help prioritize channels for human review.</li>
+  </ul>
+
+  <h2>3. What we do NOT collect</h2>
+  <p>We do not collect your YouTube watch history, search queries, comments, or videos from channels that are not flagged/reported. We do not sell, rent, or share user data with advertisers or third-party data brokers.</p>
+
+  <h2>4. Where data is stored and retention</h2>
+  <p>Account, report, and signal data are stored on <strong>Supabase</strong> (PostgreSQL + Supabase Auth). Account data is kept until you delete your account. Reports and channel signals are kept while your account exists (and are deleted automatically if you delete your account); reviewed channel verdicts (public channel handle/ID only, with no user ID) remain in the shared list.</p>
+
+  <h2>5. How to delete your account and data</h2>
+  <ul>
+    <li><strong>In the extension:</strong> Open the extension popup → click <em>Delete account</em> → confirm. This immediately deletes your account, reports, and channel signals.</li>
+    <li><strong>By email:</strong> Send a deletion request from your account email to <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>.</li>
+  </ul>
+
+  <hr id="el" />
+
+  <h1>Πολιτική Απορρήτου — AI Slop Detector</h1>
+  <p class="meta">Τελευταία ενημέρωση: 20 Νοεμβρίου 2026 · <a href="appeal.html">Αίτημα επανεξέτασης καναλιού</a></p>
+
+  <h2>1. Ποιοι είμαστε</h2>
+  <p>Το AI Slop Detector είναι μια επέκταση περιηγητή που επισημαίνει στο YouTube κανάλια που πιθανώς παράγουν μαζικά περιεχόμενο AI και επιτρέπει στους συνδεδεμένους χρήστες να υποβάλλουν αναφορές. Επικοινωνία: <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>.</p>
+
+  <h2>2. Ποια δεδομένα συλλέγουμε και γιατί</h2>
+  <ul>
+    <li><strong>Χωρίς σύνδεση:</strong> Η επέκταση κατεβάζει μόνο τη δημόσια λίστα ελεγμένων καναλιών και διαβάζει τοπικά στον browser δημόσια RSS feeds/σελίδες καναλιών του YouTube. Δεν αποστέλλονται προσωπικά δεδομένα ή ιστορικό προβολών.</li>
+    <li><strong>Δεδομένα λογαριασμού (κατά την εγγραφή/σύνδεση):</strong> Το email και τα διαπιστευτήριά σας (κωδικός σε μορφή hash και tokens σύνδεσης), μέσω Supabase Auth. Το session αποθηκεύεται στο απομονωμένο IndexedDB της επέκτασης (χωρίς πρόσβαση από scripts του YouTube).</li>
+    <li><strong>Αναφορές (όταν υποβάλλετε αναφορά):</strong> Το αναγνωριστικό χρήστη (user ID), το ID του βίντεο, το handle/ID του καναλιού, οι λόγοι που επιλέξατε και η ημερομηνία.</li>
+    <li><strong>Αυτόματες ενδείξεις καναλιών (μόνο για συνδεδεμένους χρήστες):</strong> Όταν περιηγείστε στο YouTube ενώ είστε συνδεδεμένοι και ένα κανάλι επισημανθεί ως «Πιθανό AI» από το δημόσιο RSS feed του, αποστέλλονται το ID/handle του καναλιού και οι αριθμητικές ενδείξεις (π.χ. ρυθμός ανεβάσματος, ομοιότητα τίτλων) για την ιεράρχηση της ουράς ελέγχου.</li>
+  </ul>
+
+  <h2>3. Τι ΔΕΝ συλλέγουμε</h2>
+  <p>Δεν συλλέγουμε το ιστορικό παρακολούθησης, τις αναζητήσεις ή τα σχόλιά σας. Δεν πωλούμε ούτε παραχωρούμε δεδομένα σε διαφημιστές ή τρίτους.</p>
+
+  <h2>4. Πού αποθηκεύονται και για πόσο</h2>
+  <p>Τα δεδομένα αποθηκεύονται στο <strong>Supabase</strong>. Τα στοιχεία λογαριασμού, οι αναφορές και οι ενδείξεις σας διατηρούνται όσο υπάρχει ο λογαριασμός σας και διαγράφονται αυτόματα όταν τον διαγράψετε. Οι δημόσιες ετυμηγορίες καναλιών (μόνο handle/ID καναλιού, χωρίς στοιχεία χρήστη) παραμένουν στη λίστα.</p>
+
+  <h2>5. Διαγραφή λογαριασμού και δεδομένων</h2>
+  <ul>
+    <li><strong>Μέσα από την επέκταση:</strong> Ανοίξτε το popup → <em>Διαγραφή λογαριασμού</em> → επιβεβαίωση. Διαγράφονται άμεσα ο λογαριασμός, οι αναφορές και οι ενδείξεις σας.</li>
+    <li><strong>Μέσω email:</strong> Στείλτε αίτημα από το email του λογαριασμού σας στο <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>.</li>
+  </ul>
+</body>
+</html>
